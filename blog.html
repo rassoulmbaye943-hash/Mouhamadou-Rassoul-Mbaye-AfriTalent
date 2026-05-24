@@ -9,14 +9,553 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
     <!-- Votre feuille de style personnelle -->
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/x-icon" href="./images/logo AfriTalent.png" />
   </head>
   <body>
-    <!-- Le contenu de la page sera ajoute ici -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <img
+          src="./images/logo AfriTalent.png"
+          alt="logo AfriTalent"
+          height="40px"
+        />
+        <a class="navbar-brand" href="index.html">AfriTalent</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMenu"
+          aria-controls="navMenu"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Accueil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="freelances.html">Freelances</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="tarifs.html">Tarifs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">À propos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="blog.html">Blog</a>
+            </li>
+          </ul>
+          <button id="darkToggle" aria-label="Basculer le mode sombre">
+            <i class="bi bi-moon-fill" id="darkIcon"></i>
+          </button>
+          <a href="freelances.html" class="btn btn-primary ms-3"
+            >Rejoindre AfriTalent</a
+          >
+        </div>
+      </div>
+    </nav>
+    <main>
+      <!-- Section Hero : accroche principale -->
+      <section class="hero">
+        <div class="container">
+          <h1 class="text-center mb-5 fade-in-up">
+            Bienvenue sur le Blog d'AfriTalent
+          </h1>
+          <div
+            class="blog-featured-img"
+            aria-hidden="true"
+            style="
+              font-size: 10rem;
+              background: linear-gradient(
+                to top,
+                rgba(0, 0, 0, 0.35),
+                transparent 60%
+              );
+              align-items: center;
+              justify-content: center;
+              display: flex;
+            "
+          >
+            🌍
+          </div>
+          <p>
+            Découvrez les dernières tendances, conseils et actualités du monde
+            du freelancing tech en Afrique. Restez informé et inspiré avec
+            AfriTalent !
+          </p>
+          <p class="page-hero-sub">
+            Conseils freelance, actualités tech africaine, guides pratiques et
+            success stories.
+          </p>
+        </div>
+      </section>
+      <section aria-labelledby="blog-title" class="py-5">
+        <div class="container">
+          <div class="blog-featured-body mb-5">
+            <span class="blog-cat blog-cat--carriere">
+              <i class="bi bi-fire"></i> Carrière
+            </span>
+            <h2 class="blog-title mt-3" id="blog-title">
+              <a href="#">
+                Comment passer de développeur salarié à freelance en Afrique :
+                le guide complet 2026
+              </a>
+            </h2>
+            <p class="blog-excerpt">
+              Le passage au freelance est une décision qui change une vie. En
+              Afrique, où l'écosystème digital explose, les opportunités n'ont
+              jamais été aussi nombreuses. Mais par où commencement ? Comment
+              fixer ses tarifs, trouver ses premiers clients, gérer
+              l'administratif ? Ce guide vous accompagne étape par étape.
+            </p>
+            <div class="blog-meta d-flex align-items-center flex-wrap gap-2">
+              <div
+                class="blog-meta-avatar blog-meta-avatar--1"
+                aria-hidden="true"
+              >
+                👨🏿‍💻
+              </div>
+
+              <div class="blog-meta-info">
+                <span class="blog-meta-author">Oumar Diallo</span><br />
+                <span class="blog-meta-date">15 avril 2026</span>
+              </div>
+
+              <a href="#" class="blog-read-more ms-auto">
+                Lire l'article <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="blog-filter-bar fade-in-up mb-5"
+            role="group"
+            aria-label="Filtrer les articles"
+          >
+            <button class="blog-filter-btn active" data-blog-filter="all">
+              Tous
+            </button>
+            <button class="blog-filter-btn" data-blog-filter="carriere">
+              Carrière
+            </button>
+            <button class="blog-filter-btn" data-blog-filter="tech">
+              Tech
+            </button>
+            <button class="blog-filter-btn" data-blog-filter="business">
+              Business
+            </button>
+            <button class="blog-filter-btn" data-blog-filter="design">
+              Design
+            </button>
+            <button class="blog-filter-btn" data-blog-filter="data-ia">
+              Data & IA
+            </button>
+          </div>
+
+          <div class="row g-4 blog-posts-grid">
+            <div class="col-12 col-md-6 blog-post-wrapper" data-blog-cat="tech">
+              <article class="blog-card">
+                <div
+                  class="blog-card-img text-center p-5"
+                  style="
+                    font-size: 3rem;
+                    background: linear-gradient(135deg, #1a1a2e, #2d2d50);
+                  "
+                >
+                  🛠️
+                </div>
+
+                <div class="blog-card-body p-4">
+                  <span class="blog-cat blog-cat--tech">
+                    <i class="bi bi-cpu"></i> Tech
+                  </span>
+
+                  <h3 class="blog-title mt-3">
+                    <a href="#">
+                      Les outils indispensables du freelance tech africain en
+                      2026.
+                    </a>
+                  </h3>
+
+                  <p class="blog-excerpt">
+                    VS Code, Figma, Notion, Postman… Notre sélection des outils
+                    qui boostent votre productivité et votre crédibilité client.
+                  </p>
+                  <div class="blog-meta">
+                    <div
+                      class="blog-meta-avatar blog-meta-avatar--3"
+                      aria-hidden="true"
+                    >
+                      👨🏽‍💼
+                    </div>
+                    <div class="blog-meta-info">
+                      <span class="blog-meta-author">Amadou Ba</span>
+                      <span class="blog-meta-date">10 avril 2026</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div
+              class="col-12 col-md-6 blog-post-wrapper"
+              data-blog-cat="business"
+            >
+              <article class="blog-card">
+                <div
+                  class="blog-card-img text-center p-5"
+                  style="
+                    font-size: 3rem;
+                    background: linear-gradient(135deg, #1a1a2e, #3b1f5e);
+                  "
+                >
+                  💰
+                </div>
+
+                <div class="blog-card-body p-4">
+                  <span class="blog-cat blog-cat--business">
+                    <i class="bi bi-graph-up-arrow"></i> Business
+                  </span>
+
+                  <h3 class="blog-title mt-3">
+                    <a href="#">
+                      Comment fixer ses tarifs freelance quand on débute sans se
+                      brader.
+                    </a>
+                  </h3>
+
+                  <p class="blog-excerpt">
+                    La question qui bloque tous les nouveaux freelances. Voici
+                    une méthode concrète basée sur votre marché local et vos
+                    objectifs.
+                  </p>
+                  <div class="blog-meta">
+                    <div
+                      class="blog-meta-avatar blog-meta-avatar--2"
+                      aria-hidden="true"
+                    >
+                      👩🏾‍💼
+                    </div>
+                    <div class="blog-meta-info">
+                      <span class="blog-meta-author">Amina Ndiaye</span>
+                      <span class="blog-meta-date">5 avril 2026</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div
+              class="col-12 col-md-6 blog-post-wrapper"
+              data-blog-cat="design"
+            >
+              <article class="blog-card">
+                <div
+                  class="blog-card-img text-center p-5"
+                  style="
+                    font-size: 3rem;
+                    background: linear-gradient(135deg, #0f2027, #2c5364);
+                  "
+                >
+                  🎨
+                </div>
+
+                <div class="blog-card-body p-4">
+                  <span class="blog-cat blog-cat--design">
+                    <i class="bi bi-palette"></i> Design
+                  </span>
+
+                  <h3 class="blog-title mt-3">
+                    <a href="#">
+                      Tendances UI/UX 2026 : ce que veulent vraiment les clients
+                      africains
+                    </a>
+                  </h3>
+
+                  <p class="blog-excerpt">
+                    Bento Grid, typographie expressive, dark mode natif… Le
+                    design africain s'impose avec ses propres codes. Décryptage.
+                  </p>
+                  <div class="blog-meta">
+                    <div
+                      class="blog-meta-avatar blog-meta-avatar--3"
+                      aria-hidden="true"
+                    >
+                      👨🏽‍💼
+                    </div>
+                    <div class="blog-meta-info">
+                      <span class="blog-meta-author">Modou Fall</span>
+                      <span class="blog-meta-date">10 avril 2026</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div
+              class="col-12 col-md-6 blog-post-wrapper"
+              data-blog-cat="data-ia"
+            >
+              <article class="blog-card">
+                <div
+                  class="blog-card-img text-center p-5"
+                  style="
+                    font-size: 3rem;
+                    background: linear-gradient(135deg, #1a1a2e, #4a1942);
+                  "
+                >
+                  🤖
+                </div>
+
+                <div class="blog-card-body p-4">
+                  <span class="blog-cat blog-cat--data-ia">
+                    <i class="bi bi-cpu"></i> Data & IA
+                  </span>
+
+                  <h3 class="blog-title mt-3">
+                    <a href="#">
+                      L'IA va-t-elle tuer le métier de développeur freelance ?
+                      Notre analyse.
+                    </a>
+                  </h3>
+
+                  <p class="blog-excerpt">
+                    ChatGPT, Copilot, Cursor… Les outils IA transforment le
+                    développement. Menace ou opportunité pour les freelances
+                    africains ?
+                  </p>
+                  <div class="blog-meta">
+                    <div
+                      class="blog-meta-avatar blog-meta-avatar--3"
+                      aria-hidden="true"
+                    >
+                      👨🏽‍💼
+                    </div>
+                    <div class="blog-meta-info">
+                      <span class="blog-meta-author">Mohamed Diallo</span>
+                      <span class="blog-meta-date">30 juin 2026</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div
+              class="col-12 col-md-6 blog-post-wrapper"
+              data-blog-cat="carriere"
+            >
+              <article class="blog-card">
+                <div
+                  class="blog-card-img text-center p-5"
+                  style="
+                    font-size: 3rem;
+                    background: linear-gradient(135deg, #0d1b2a, #1b4332);
+                  "
+                >
+                  🏆
+                </div>
+
+                <div class="blog-card-body p-4">
+                  <span class="blog-cat blog-cat--carriere">
+                    <i class="bi bi-briefcase"></i> Carrière
+                  </span>
+
+                  <h3 class="blog-title mt-3">
+                    <a href="#">
+                      Construire un portfolio qui convertit : les 7 erreurs à
+                      éviter
+                    </a>
+                  </h3>
+
+                  <p class="blog-excerpt">
+                    Votre portfolio est votre CV vivant. Voici comment le
+                    structurer pour convaincre un client en moins de 30
+                    secondes.
+                  </p>
+                  <div class="blog-meta">
+                    <div
+                      class="blog-meta-avatar blog-meta-avatar--3"
+                      aria-hidden="true"
+                    >
+                      👩🏾‍💻
+                    </div>
+                    <div class="blog-meta-info">
+                      <span class="blog-meta-author">Bineta Ndiaye</span>
+                      <span class="blog-meta-date">12 mars 2026</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div
+              class="col-12 col-md-6 blog-post-wrapper"
+              data-blog-cat="business"
+            >
+              <article class="blog-card">
+                <div
+                  class="blog-card-img text-center p-5"
+                  style="
+                    font-size: 3rem;
+                    background: linear-gradient(135deg, #1a1a2e, #3d2314);
+                  "
+                >
+                  📊
+                </div>
+
+                <div class="blog-card-body p-4">
+                  <span class="blog-cat blog-cat--business">
+                    <i class="bi bi-graph-up-arrow"></i> Business
+                  </span>
+
+                  <h3 class="blog-title mt-3">
+                    <a href="#">
+                      Gérer ses finances en freelance : le guide pratique pour
+                      l'Afrique francophone.
+                    </a>
+                  </h3>
+                  <p class="blog-excerpt">
+                    Facturation, épargne, impôts, Mobile Money… Tout ce que vous
+                    devez savoir pour être un freelance financièrement solide.
+                  </p>
+                  <div class="blog-meta">
+                    <div
+                      class="blog-meta-avatar blog-meta-avatar--3"
+                      aria-hidden="true"
+                    >
+                      👩🏽‍💼
+                    </div>
+                    <div class="blog-meta-info">
+                      <span class="blog-meta-author">Modou Sarr</span>
+                      <span class="blog-meta-date">5 mars 2026</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <nav aria-label="Pagination" class="mt-5">
+            <ul class="pagination justify-content-center">
+              <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1" aria-disabled="true"
+                  >Précédent</a
+                >
+              </li>
+              <li class="page-item active" aria-current="page">
+                <a class="page-link" href="#">1</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#">2</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#">3</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#">Suivant</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+      <hr />
+    </main>
+    <!-- Pied de page -->
+    <footer class="footer">
+      <div class="footer-brand">
+        <img src="./images/logo AfriTalent.png" width="50px" alt="logo" />
+        <h4>AfriTalent:</h4>
+        <p>
+          La plateforme de référence pour <br />les freelances tech africains.
+          <br />
+          Simple, fiable, pensée pour vous.
+        </p>
+        <a href="freelances.html" class="btn btn-primary ms-3"
+          ><i class="bi bi-person-plus"></i> Créer mon profil</a
+        >
+      </div>
+      <div class="social-icons">
+        <h5>Nos Réseaux sociaux</h5>
+        <ul>
+          <li>
+            <a href="#" class="social-icon" aria-label="Twitter"
+              ><i class="bi bi-twitter-x"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#" class="social-icon" aria-label="LinkedIn"
+              ><i class="bi bi-linkedin"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#" class="social-icon" aria-label="Instagram"
+              ><i class="bi bi-instagram"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#" class="social-icon" aria-label="YouTube"
+              ><i class="bi bi-youtube"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#" class="social-icon" aria-label="Facebook"
+              ><i class="bi bi-facebook"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h5>Liens utiles</h5>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="freelances.html">Trouver un freelance</a></li>
+          <li><a href="tarifs.html">Tarifs &amp; Plans</a></li>
+          <li><a href="about.html">À propos</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Ressources</h5>
+        <ul>
+          <li><a href="#">Blog &amp; Actualités</a></li>
+          <li><a href="#">Guide du Freelance</a></li>
+          <li><a href="#">Centre d'aide</a></li>
+          <li><a href="#">Conditions d'utilisation</a></li>
+          <li><a href="#">Confidentialité</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul>
+          <li>
+            <a href="mailto:hello@afritalent.com">hello@afritalent.com</a>
+          </li>
+          <li><a href="tel:+221776750434">+221 77 675 04 34</a></li>
+          <li><span>Dakar, Sénégal</span></li>
+        </ul>
+      </div>
+    </footer>
+    <hr />
+    <p>&copy; <span id="year"></span> AfriTalent. Tous droits reserves.</p>
     <!-- Bootstrap 5 via CDN : script JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Votre script JavaScript -->
+    <button id="backToTop" title="Retour en haut">
+      <i class="bi bi-arrow-up"></i>
+    </button>
     <script src="js/main.js"></script>
   </body>
 </html>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AfriTalent — Freelanes</title>
+    <title>AfriTalent — freelances</title>
     <!-- Bootstrap 5 via CDN : feuille de style -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
@@ -11,12 +11,594 @@
     />
     <!-- Votre feuille de style personnelle -->
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/x-icon" href="./images/logo AfriTalent.png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <!-- Le contenu de la page sera ajoute ici -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <img
+          src="./images/logo AfriTalent.png"
+          alt="logo AfriTalent"
+          height="40px"
+        />
+        <a class="navbar-brand" href="index.html">AfriTalent</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMenu"
+          aria-controls="navMenu"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Accueil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="freelances.html">Freelances</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="tarifs.html">Tarifs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">À propos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blog.html">Blog</a>
+            </li>
+          </ul>
+          <button id="darkToggle" aria-label="Basculer le mode sombre">
+            <i class="bi bi-moon-fill" id="darkIcon"></i>
+          </button>
+          <a href="freelances.html" class="btn btn-primary ms-3"
+            >Rejoindre AfriTalent</a
+          >
+        </div>
+      </div>
+    </nav>
+    <!-- Contenu principal -->
+    <main>
+      <!-- Section Hero : accroche principale -->
+      <section class="hero">
+        <div class="container">
+          <h1 class="text-center mb-5 fade-in-up">
+            Rejoignez la communauté de freelances tech d'AfriTalent
+          </h1>
+          <p>
+            AfriTalent est la plateforme de référence pour les freelances tech
+            africains. Que vous soyez développeur, designer, consultant ou
+            spécialiste du marketing digital, AfriTalent vous connecte avec des
+            clients du monde entier à la recherche de vos compétences uniques.
+          </p>
+        </div>
+      </section>
+      <!-- Section Avantages : pourquoi choisir AfriTalent -->
+      <section class="advantages">
+        <div class="container">
+          <h2 class="text-center mb-5 fade-in-up">
+            Pourquoi choisir AfriTalent ?
+          </h2>
+          <div class="row">
+            <div class="col-md-4">
+              <h3>Visibilité mondiale</h3>
+              <p>
+                Accédez à une audience internationale de clients à la recherche
+                de talents africains. AfriTalent vous offre une vitrine pour vos
+                compétences et votre expertise.
+              </p>
+            </div>
+            <div class="col-md-4">
+              <h3>Processus simplifié</h3>
+              <p>
+                Notre plateforme intuitive facilite la création de votre profil,
+                la gestion de vos projets et la communication avec les clients.
+                Concentrez-vous sur votre travail, nous nous occupons du reste.
+              </p>
+            </div>
+            <div class="col-md-4">
+              <h3>Paiement sécurisé</h3>
+              <p>
+                AfriTalent garantit des paiements sécurisés et ponctuels. Vous
+                pouvez travailler en toute confiance, sachant que votre travail
+                sera rémunéré à sa juste valeur.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Nos 10 freelances disponibles -->
+      <div class="container">
+        <h2 class="text-center mb-5 fade-in-up">Nos freelances disponibles</h2>
+        <p class="page-hero-sub">
+          Découvrez nos <strong>+2 500 talents tech</strong> vérifiés, prêts à
+          vous accompagner dans vos projets.
+        </p>
+      </div>
+      <section aria-labelledby="catalogue-title">
+        <div class="container">
+          <!-- Barre de filtres -->
+          <div
+            class="filter-bar fade-in-up"
+            role="group"
+            aria-label="Filtrer par catégorie"
+          >
+            <button class="filter-btn active" data-filter="all">Tous</button>
+            <button class="filter-btn" data-filter="dev">
+              Développement Web
+            </button>
+            <button class="filter-btn" data-filter="design">
+              Design UI/UX
+            </button>
+            <button class="filter-btn" data-filter="data">Data &amp; IA</button>
+            <button class="filter-btn" data-filter="marketing">
+              Marketing Digital
+            </button>
+            <button class="filter-btn" data-filter="redac">
+              Rédaction Tech
+            </button>
+            <button class="filter-btn" data-filter="devops">
+              DevOps &amp; Cloud
+            </button>
+          </div>
+          <div class="row g-4" id="freelancesGrid">
+            <div class="col-12 col-md-6 col-lg-4 fade-in-up">
+              <article
+                class="freelance-card"
+                data-category="dev"
+                aria-label="Profil de Kwame Asante"
+              >
+                <div class="freelance-badge badge-dev">
+                  <i class="bi bi-code-slash"></i> Développement Web
+                </div>
+                <div class="freelance-header">
+                  <div class="freelance-avatar avatar--blue" aria-hidden="true">
+                    👨🏾‍💻
+                  </div>
+                  <div>
+                    <div class="freelance-name">Kwame Asante</div>
+                    <div class="freelance-specialty">Full-Stack Developer</div>
+                  </div>
+                </div>
+                <p class="freelance-bio">
+                  Développeur React / Node.js avec 5 ans d'expérience.
+                  Spécialisé dans les applications SaaS pour le marché africain.
+                </p>
+                <div class="freelance-meta">
+                  <span class="freelance-rate">45 €/h</span>
+                  <span class="freelance-stars" aria-label="Note 4.9"
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-half"></i> 4.9</span
+                  >
+                </div>
+                <a href="#" class="btn-primary-at btn-primary-at--full"
+                  >Voir le profil</a
+                >
+              </article>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4 fade-in-up">
+              <article
+                class="freelance-card"
+                data-category="design"
+                aria-label="Profil de Amina Koné"
+              >
+                <div class="freelance-badge badge-design">
+                  <i class="bi bi-palette"></i> Design UI/UX
+                </div>
+                <div class="freelance-header">
+                  <div
+                    class="freelance-avatar avatar--purple"
+                    aria-hidden="true"
+                  >
+                    👩🏽‍🎨
+                  </div>
+                  <div>
+                    <div class="freelance-name">Amina Koné</div>
+                    <div class="freelance-specialty">UI/UX Designer</div>
+                  </div>
+                </div>
+                <p class="freelance-bio">
+                  Designer produit passionnée par l'accessibilité et le design
+                  inclusif. Portfolio de +40 apps mobiles.
+                </p>
+                <div class="freelance-meta">
+                  <span class="freelance-rate">38 €/h</span>
+                  <span class="freelance-stars" aria-label="Note 5.0"
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i> 5.0</span
+                  >
+                </div>
+                <a href="#" class="btn-primary-at btn-primary-at--full"
+                  >Voir le profil</a
+                >
+              </article>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4 fade-in-up">
+              <article
+                class="freelance-card"
+                data-category="data"
+                aria-label="Profil de Ibrahim Diallo"
+              >
+                <div class="freelance-badge badge-data">
+                  <i class="bi bi-cpu"></i> Data &amp; IA
+                </div>
+                <div class="freelance-header">
+                  <div class="freelance-avatar avatar--teal" aria-hidden="true">
+                    👨🏿‍🔬
+                  </div>
+                  <div>
+                    <div class="freelance-name">Ibrahim Diallo</div>
+                    <div class="freelance-specialty">Data Scientist</div>
+                  </div>
+                </div>
+                <p class="freelance-bio">
+                  Expert Python / TensorFlow. Développe des modèles ML pour la
+                  finance et l'agriculture africaines.
+                </p>
+                <div class="freelance-meta">
+                  <span class="freelance-rate">55 €/h</span>
+                  <span class="freelance-stars" aria-label="Note 4.8"
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-half"></i> 4.8</span
+                  >
+                </div>
+                <a href="#" class="btn-primary-at btn-primary-at--full"
+                  >Voir le profil</a
+                >
+              </article>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4 fade-in-up">
+              <article
+                class="freelance-card"
+                data-category="dev"
+                aria-label="Profil de Fatou Ndiaye"
+              >
+                <div class="freelance-badge badge-dev">
+                  <i class="bi bi-code-slash"></i> Développement Web
+                </div>
+                <div class="freelance-header">
+                  <div
+                    class="freelance-avatar avatar--orange"
+                    aria-hidden="true"
+                  >
+                    👩🏾‍💻
+                  </div>
+                  <div>
+                    <div class="freelance-name">Fatou Ndiaye</div>
+                    <div class="freelance-specialty">Frontend Developer</div>
+                  </div>
+                </div>
+                <p class="freelance-bio">
+                  Spécialiste Vue.js et animations CSS. Crée des interfaces
+                  performantes et accessibles depuis Dakar.
+                </p>
+                <div class="freelance-meta">
+                  <span class="freelance-rate">35 €/h</span>
+                  <span class="freelance-stars" aria-label="Note 4.7"
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-half"></i> 4.7</span
+                  >
+                </div>
+                <a href="#" class="btn-primary-at btn-primary-at--full"
+                  >Voir le profil</a
+                >
+              </article>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4 fade-in-up">
+              <article
+                class="freelance-card"
+                data-category="devops"
+                aria-label="Profil de Kofi Mensah"
+              >
+                <div class="freelance-badge badge-devops">
+                  <i class="bi bi-cloud"></i> DevOps &amp; Cloud
+                </div>
+                <div class="freelance-header">
+                  <div
+                    class="freelance-avatar avatar--green"
+                    aria-hidden="true"
+                  >
+                    👨🏽‍💻
+                  </div>
+                  <div>
+                    <div class="freelance-name">Kofi Mensah</div>
+                    <div class="freelance-specialty">DevOps Engineer</div>
+                  </div>
+                </div>
+                <p class="freelance-bio">
+                  Architecte AWS &amp; GCP certifié. Automatise les pipelines
+                  CI/CD pour startups et scale-ups africaines.
+                </p>
+                <div class="freelance-meta">
+                  <span class="freelance-rate">60 €/h</span>
+                  <span class="freelance-stars" aria-label="Note 4.9"
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-half"></i> 4.9</span
+                  >
+                </div>
+                <a href="#" class="btn-primary-at btn-primary-at--full"
+                  >Voir le profil</a
+                >
+              </article>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4 fade-in-up">
+              <article
+                class="freelance-card"
+                data-category="marketing"
+                aria-label="Profil de Aya Traoré"
+              >
+                <div class="freelance-badge badge-marketing">
+                  <i class="bi bi-graph-up"></i> Marketing Digital
+                </div>
+                <div class="freelance-header">
+                  <div
+                    class="freelance-avatar avatar--amber"
+                    aria-hidden="true"
+                  >
+                    👩🏾‍💼
+                  </div>
+                  <div>
+                    <div class="freelance-name">Aya Traoré</div>
+                    <div class="freelance-specialty">Growth Marketer</div>
+                  </div>
+                </div>
+                <p class="freelance-bio">
+                  Experte SEO, SEM et réseaux sociaux. A fait croître 3 startups
+                  fintech de 0 à 100K utilisateurs.
+                </p>
+                <div class="freelance-meta">
+                  <span class="freelance-rate">40 €/h</span>
+                  <span class="freelance-stars" aria-label="Note 4.6"
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-half"></i> 4.6</span
+                  >
+                </div>
+                <a href="#" class="btn-primary-at btn-primary-at--full"
+                  >Voir le profil</a
+                >
+              </article>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4 fade-in-up">
+              <article
+                class="freelance-card"
+                data-category="redac"
+                aria-label="Profil de Moussa Coulibaly"
+              >
+                <div class="freelance-badge badge-redac">
+                  <i class="bi bi-pencil"></i> Rédaction Tech
+                </div>
+                <div class="freelance-header">
+                  <div class="freelance-avatar avatar--red" aria-hidden="true">
+                    👨🏿‍✍️
+                  </div>
+                  <div>
+                    <div class="freelance-name">Moussa Coulibaly</div>
+                    <div class="freelance-specialty">Technical Writer</div>
+                  </div>
+                </div>
+                <p class="freelance-bio">
+                  Rédacteur tech bilingue FR/EN. Spécialisé en documentation
+                  API, blogs tech et cas d'usage IA.
+                </p>
+                <div class="freelance-meta">
+                  <span class="freelance-rate">30 €/h</span>
+                  <span class="freelance-stars" aria-label="Note 4.8"
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-half"></i> 4.8</span
+                  >
+                </div>
+                <a href="#" class="btn-primary-at btn-primary-at--full"
+                  >Voir le profil</a
+                >
+              </article>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4 fade-in-up">
+              <article
+                class="freelance-card"
+                data-category="data"
+                aria-label="Profil de Nadia Owusu"
+              >
+                <div class="freelance-badge badge-data">
+                  <i class="bi bi-cpu"></i> Data &amp; IA
+                </div>
+                <div class="freelance-header">
+                  <div
+                    class="freelance-avatar avatar--violet"
+                    aria-hidden="true"
+                  >
+                    👩🏽‍🔬
+                  </div>
+                  <div>
+                    <div class="freelance-name">Nadia Owusu</div>
+                    <div class="freelance-specialty">ML Engineer</div>
+                  </div>
+                </div>
+                <p class="freelance-bio">
+                  Ingénieure ML spécialisée NLP et vision par ordinateur.
+                  Diplômée de l'AIMS Cameroun.
+                </p>
+                <div class="freelance-meta">
+                  <span class="freelance-rate">50 €/h</span>
+                  <span class="freelance-stars" aria-label="Note 5.0"
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i> 5.0</span
+                  >
+                </div>
+                <a href="#" class="btn-primary-at btn-primary-at--full"
+                  >Voir le profil</a
+                >
+              </article>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4 fade-in-up">
+              <article
+                class="freelance-card"
+                data-category="design"
+                aria-label="Profil de Seun Adeyemi"
+              >
+                <div class="freelance-badge badge-design">
+                  <i class="bi bi-palette"></i> Design UI/UX
+                </div>
+                <div class="freelance-header">
+                  <div class="freelance-avatar avatar--pink" aria-hidden="true">
+                    👨🏿‍🎨
+                  </div>
+                  <div>
+                    <div class="freelance-name">Seun Adeyemi</div>
+                    <div class="freelance-specialty">
+                      Brand &amp; Motion Designer
+                    </div>
+                  </div>
+                </div>
+                <p class="freelance-bio">
+                  Designer visuel et motion graphics pour les marques africaines
+                  émergentes. Figma, After Effects, Lottie.
+                </p>
+                <div class="freelance-meta">
+                  <span class="freelance-rate">42 €/h</span>
+                  <span class="freelance-stars" aria-label="Note 4.7"
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-half"></i> 4.7</span
+                  >
+                </div>
+                <a href="#" class="btn-primary-at btn-primary-at--full"
+                  >Voir le profil</a
+                >
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr />
+    </main>
+    <!-- Pied de page -->
+    <footer class="footer">
+      <div class="footer-brand">
+        <img src="./images/logo AfriTalent.png" width="50px" alt="logo" />
+        <h4>AfriTalent:</h4>
+        <p>
+          La plateforme de référence pour <br />les freelances tech africains.
+          <br />
+          Simple, fiable, pensée pour vous.
+        </p>
+        <a href="freelances.html" class="btn btn-primary ms-3"
+          ><i class="bi bi-person-plus"></i> Créer mon profil</a
+        >
+      </div>
+      <div class="social-icons">
+        <h5>Nos Réseaux sociaux</h5>
+        <ul>
+          <li>
+            <a href="#" class="social-icon" aria-label="Twitter"
+              ><i class="bi bi-twitter-x"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#" class="social-icon" aria-label="LinkedIn"
+              ><i class="bi bi-linkedin"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#" class="social-icon" aria-label="Instagram"
+              ><i class="bi bi-instagram"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#" class="social-icon" aria-label="YouTube"
+              ><i class="bi bi-youtube"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#" class="social-icon" aria-label="Facebook"
+              ><i class="bi bi-facebook"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h5>Liens utiles</h5>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="freelances.html">Trouver un freelance</a></li>
+          <li><a href="tarifs.html">Tarifs &amp; Plans</a></li>
+          <li><a href="about.html">À propos</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Ressources</h5>
+        <ul>
+          <li><a href="#">Blog &amp; Actualités</a></li>
+          <li><a href="#">Guide du Freelance</a></li>
+          <li><a href="#">Centre d'aide</a></li>
+          <li><a href="#">Conditions d'utilisation</a></li>
+          <li><a href="#">Confidentialité</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul>
+          <li>
+            <a href="mailto:hello@afritalent.com">hello@afritalent.com</a>
+          </li>
+          <li><a href="tel:+221776750434">+221 77 675 04 34</a></li>
+          <li><span>Dakar, Sénégal</span></li>
+        </ul>
+      </div>
+    </footer>
+    <hr />
+    <p>&copy; <span id="year"></span> AfriTalent. Tous droits reserves.</p>
     <!-- Bootstrap 5 via CDN : script JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Votre script JavaScript -->
+    <button id="backToTop" title="Retour en haut">
+      <i class="bi bi-arrow-up"></i>
+    </button>
     <script src="js/main.js"></script>
   </body>
 </html>
