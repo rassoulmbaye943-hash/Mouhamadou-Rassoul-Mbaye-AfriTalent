@@ -1497,3 +1497,127 @@ body > hr + p {
     border-color: transparent;
   }
 }
+/* commit 5 */
+/* Mobile */
+@media (min-width: 375px) and (max-width: 768px) {
+  section {
+    padding: 52px 0;
+  }
+  #hero {
+    padding: 56px 0 44px;
+  }
+  h2.text-center {
+    font-size: 1.7rem;
+  }
+  .section-title {
+    font-size: 1.5rem;
+  }
+  .hero-image {
+    max-width: 85%;
+    margin: 0 auto;
+  }
+  .bento-grid {
+    grid-template-columns: 1fr;
+  }
+  .bento-card,
+  .card-wide,
+  .bento-card--stat-lg,
+  .bento-card--stat-sm {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+  .row > [class*="col-"] {
+    flex: 0 0 auto;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .filter-bar,
+  .blog-filter-bar {
+    justify-content: center;
+  }
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 36px;
+    height: 36px;
+  }
+  .bento-grid {
+    flex-direction: column;
+  }
+
+  .map-frame-wrap iframe {
+    height: 280px;
+  }
+  #statistiques .row p {
+    margin: 0 0 14px;
+  }
+  footer.footer {
+    padding: 40px 24px 32px;
+    gap: 32px;
+  }
+  footer.footer > div {
+    width: 100%;
+    text-align: center;
+  }
+  .social-icons ul {
+    flex-direction: row;
+    justify-content: center;
+    gap: 16px;
+  }
+  footer.footer h5,
+  footer.footer ul li {
+    text-align: center;
+  }
+  .freelance-card {
+    padding: 18px;
+  }
+  .hero {
+    padding: 56px 0 44px;
+  }
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+  .blog-card-body {
+    padding: 16px;
+  }
+}
+/* Tablette */
+@media (min-width: 768px) and (max-width: 1200px) {
+  #hero {
+    min-height: auto;
+    padding: 64px 0 56px;
+  }
+  .bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .bento-card,
+  .card-wide,
+  .bento-card--stat-lg,
+  .bento-card--stat-sm {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+
+  .row > .col-md-6 {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+  .contact-info-sticky {
+    position: static;
+  }
+
+  footer.footer {
+    flex-direction: column;
+    padding: 48px 28px 36px;
+    gap: 28px;
+  }
+  .footer-brand {
+    max-width: 100%;
+  }
+  footer.footer > div {
+    text-align: center;
+  }
+  .social-icons ul {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
