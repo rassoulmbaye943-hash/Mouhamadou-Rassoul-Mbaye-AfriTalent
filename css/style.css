@@ -79,6 +79,7 @@ body {
   color: var(--text-main);
   overflow-x: hidden;
   line-height: 1.68;
+  transition: var(--transition);
 }
 
 h1,
@@ -90,15 +91,18 @@ h6 {
   font-family: var(--font-display);
   color: var(--text-main);
   line-height: 1.2;
+  transition: var(--transition);
 }
 
 a {
   color: inherit;
   text-decoration: none;
+  transition: var(--transition);
 }
 img {
   max-width: 100%;
   display: block;
+  transition: var(--transition);
 }
 ul {
   list-style: none;
@@ -129,6 +133,7 @@ hr {
   padding: 8px 0;
   box-shadow: 0 4px 32px rgba(37, 99, 235, 0.3);
   border-bottom-color: rgba(37, 99, 235, 0.35);
+  background: rgba(10, 15, 30, 0.9) !important;
 }
 
 .navbar-brand {
@@ -151,12 +156,14 @@ hr {
   padding: 7px 14px !important;
   border-radius: var(--radius-sm);
   color: rgba(255, 255, 255, 0.78) !important;
+  transition: var(--transition);
 }
 
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active {
   color: #fff !important;
   background-color: rgba(37, 99, 235, 0.22);
+  transition: var(--transition);
 }
 
 .btn.btn-primary {
@@ -173,11 +180,13 @@ hr {
   transform: translateY(-2px);
   box-shadow: var(--shadow-glow);
   color: #fff;
+  transition: var(--transition);
 }
 
 .btn.btn-outline-light {
   border: 1.5px solid rgba(255, 255, 255, 0.45);
   border-radius: var(--radius-xl);
+  transition: var(--transition);
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 0.88rem;
@@ -214,6 +223,7 @@ h2.text-center {
   font-weight: 800;
   color: var(--text-main);
   letter-spacing: -0.02em;
+  transition: var(--transition);
 }
 
 #hero h1,
@@ -222,6 +232,7 @@ h2.text-center {
 .hero p,
 #statistiques h2 {
   color: #fff;
+  transition: var(--transition);
 }
 
 .section-title {
@@ -229,6 +240,7 @@ h2.text-center {
   font-weight: 800;
   letter-spacing: -0.02em;
   color: var(--text-main);
+  transition: var(--transition);
 }
 .section-label {
   font-family: var(--font-display);
@@ -239,15 +251,18 @@ h2.text-center {
   color: var(--color-primary);
   margin-bottom: 10px;
   display: block;
+  transition: var(--transition);
 }
 .page-hero-sub {
   font-size: 1rem;
   color: var(--text-muted);
   margin-bottom: 20px;
   line-height: 1.75;
+  transition: var(--transition);
 }
 .page-hero-sub strong {
   color: var(--color-primary);
+  transition: var(--transition);
 }
 
 .btn-primary-at {
@@ -269,6 +284,7 @@ h2.text-center {
   transform: translateY(-3px);
   box-shadow: var(--shadow-glow);
   color: #fff;
+  transition: var(--transition);
 }
 .btn-primary-at--full {
   width: 100%;
@@ -376,8 +392,8 @@ body > hr + p {
   opacity: 0;
   transform: translateY(24px);
   transition:
-    opacity 0.65s ease,
-    transform 0.65s ease;
+    opacity 0.5s ease,
+    transform 0.5s ease;
 }
 .fade-in-up.visible {
   opacity: 1;
@@ -423,6 +439,7 @@ body > hr + p {
   min-height: 92vh;
   display: flex;
   align-items: center;
+  transition: var(--transition);
 }
 
 #hero::before {
@@ -434,6 +451,7 @@ body > hr + p {
     linear-gradient(90deg, rgba(37, 99, 235, 0.06) 1px, transparent 1px);
   background-size: 48px 48px;
   pointer-events: none;
+  transition: var(--transition);
 }
 
 #hero::after {
@@ -449,6 +467,7 @@ body > hr + p {
     transparent 68%
   );
   pointer-events: none;
+  transition: var(--transition);
 }
 
 #hero h1 {
@@ -458,6 +477,7 @@ body > hr + p {
   line-height: 1.1;
   color: #fff;
   margin-bottom: 20px;
+  transition: var(--transition);
 }
 
 #hero p {
@@ -465,6 +485,7 @@ body > hr + p {
   color: rgba(255, 255, 255, 0.72);
   line-height: 1.8;
   max-width: 500px;
+  transition: var(--transition);
 }
 
 .hero-image {
@@ -506,6 +527,7 @@ body > hr + p {
   position: relative;
   z-index: 1;
   font-weight: 800;
+  transition: var(--transition);
 }
 .hero p {
   font-size: 1.05rem;
@@ -513,24 +535,27 @@ body > hr + p {
   max-width: 900px;
   margin: 0 auto 20px;
   line-height: 1.8;
+  transition: var(--transition);
 }
 
 /* Services */
 #services {
   background-color: var(--bg-card);
+  transition: var(--transition);
 }
 
-#services .col-md-4 {
+.service-card {
+  width: 100%;
   padding: 28px 22px;
   border: 1px solid var(--border-col);
   border-radius: var(--radius-lg);
-  margin-bottom: 24px;
   background-color: var(--bg-body);
   position: relative;
   overflow: hidden;
+  transition: var(--transition);
 }
 
-#services .col-md-4:hover {
+.service-card:hover {
   box-shadow: var(--shadow-hover);
   transform: translateY(-5px);
   border-color: var(--color-primary);
@@ -582,12 +607,14 @@ body > hr + p {
   padding: 80px 0;
   position: relative;
   overflow: hidden;
+  transition: var(--transition);
 }
 #statistiques h2 {
   color: var(--text-main);
   margin-bottom: 48px;
   position: relative;
   z-index: 1;
+  transition: var(--transition);
 }
 #statistiques .row p {
   font-family: var(--font-display);
@@ -598,6 +625,7 @@ body > hr + p {
   background: rgba(37, 99, 235, 0.14);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(37, 99, 235, 0.28);
+  transition: var(--transition);
   border-radius: var(--radius-lg);
   margin: 0 8px 16px;
   position: relative;
@@ -620,6 +648,7 @@ body > hr + p {
 /* Témoignages */
 #temoignages {
   background-color: var(--bg-body);
+  transition: var(--transition);
 }
 #temoignages .carousel-item img {
   width: 100px;
@@ -629,6 +658,7 @@ body > hr + p {
   box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.18);
   margin: 0 auto 18px;
   display: block;
+  transition: var(--transition);
 }
 .q {
   font-size: 1rem;
@@ -637,6 +667,7 @@ body > hr + p {
   line-height: 1.85;
   max-width: 680px;
   margin: 0 auto 16px;
+  transition: var(--transition);
 }
 .cite {
   display: block;
@@ -645,6 +676,7 @@ body > hr + p {
   font-size: 0.9rem;
   color: var(--color-primary);
   margin-bottom: 8px;
+  transition: var(--transition);
 }
 
 .freelance-stars {
@@ -673,12 +705,14 @@ body > hr + p {
 /* Bento Grid index et about */
 #comment-ca-marche {
   background-color: var(--bg-card);
+  transition: var(--transition);
 }
 
 .bento-grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 16px;
+  transition: var(--transition);
 }
 
 .bento-card {
@@ -689,6 +723,7 @@ body > hr + p {
   position: relative;
   overflow: hidden;
   grid-column: span 2;
+  transition: var(--transition);
 }
 .bento-card:hover {
   box-shadow: var(--shadow-hover);
@@ -712,6 +747,7 @@ body > hr + p {
   position: absolute;
   top: 14px;
   right: 18px;
+  transition: var(--transition);
 }
 .step-icon {
   width: 50px;
@@ -725,6 +761,7 @@ body > hr + p {
   font-size: 1.3rem;
   color: var(--color-primary);
   margin-bottom: 16px;
+  transition: var(--transition);
 }
 .bento-card:hover .step-icon {
   background: rgba(37, 99, 235, 0.18);
@@ -735,11 +772,13 @@ body > hr + p {
   font-weight: 700;
   margin-bottom: 10px;
   color: var(--text-main);
+  transition: var(--transition);
 }
 .bento-card p {
   font-size: 0.86rem;
   color: var(--text-muted);
   line-height: 1.7;
+  transition: var(--transition);
 }
 
 .bento-card--stat-lg {
@@ -794,6 +833,7 @@ body > hr + p {
 .advantages {
   background-color: var(--bg-card);
   padding: 72px 0;
+  transition: var(--transition);
 }
 .advantages .col-md-4 {
   padding-left: 20px;
@@ -831,6 +871,7 @@ body > hr + p {
   font-weight: 600;
   color: var(--text-muted);
   cursor: pointer;
+  transition: var(--transition);
 }
 .filter-btn:hover,
 .blog-filter-btn:hover {
@@ -843,6 +884,7 @@ body > hr + p {
   border-color: transparent;
   color: #fff;
   box-shadow: 0 4px 16px rgba(37, 99, 235, 0.3);
+  transition: var(--transition);
 }
 
 /* Cartes freelances */
@@ -854,6 +896,7 @@ body > hr + p {
   height: 100%;
   position: relative;
   overflow: hidden;
+  transition: var(--transition);
 }
 .freelance-card:hover {
   box-shadow: var(--shadow-hover);
@@ -865,6 +908,7 @@ body > hr + p {
   align-items: center;
   gap: 13px;
   margin-bottom: 13px;
+  transition: var(--transition);
 }
 .freelance-avatar {
   width: 58px;
@@ -875,6 +919,7 @@ body > hr + p {
   justify-content: center;
   font-size: 1.65rem;
   flex-shrink: 0;
+  transition: var(--transition);
 }
 
 .avatar--blue {
@@ -923,29 +968,34 @@ body > hr + p {
   font-size: 1rem;
   color: var(--text-main);
   margin-bottom: 2px;
+  transition: var(--transition);
 }
 .freelance-specialty {
   font-size: 0.79rem;
   color: var(--color-primary);
   font-weight: 600;
+  transition: var(--transition);
 }
 .freelance-bio {
   font-size: 0.84rem;
   color: var(--text-muted);
   margin-bottom: 14px;
   line-height: 1.65;
+  transition: var(--transition);
 }
 .freelance-meta {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 16px;
+  transition: var(--transition);
 }
 .freelance-rate {
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 0.97rem;
   color: var(--text-main);
+  transition: var(--transition);
 }
 
 .freelance-badge {
@@ -958,6 +1008,7 @@ body > hr + p {
   border-radius: var(--radius-xl);
   margin-bottom: 12px;
   letter-spacing: 0.02em;
+  transition: var(--transition);
 }
 .badge-dev {
   background: rgba(37, 99, 235, 0.1);
@@ -987,6 +1038,7 @@ body > hr + p {
 /* Tarifs */
 .plans {
   padding: 72px 0;
+  transition: var(--transition);
 }
 .plans h2 {
   text-align: center;
@@ -995,6 +1047,7 @@ body > hr + p {
   letter-spacing: -0.02em;
   margin-bottom: 40px;
   color: var(--text-main);
+  transition: var(--transition);
 }
 .plans .card {
   border: 1px solid var(--border-col);
@@ -1003,6 +1056,7 @@ body > hr + p {
   margin-bottom: 24px;
   overflow: visible;
   position: relative;
+  transition: var(--transition);
 }
 .plans .card:hover {
   box-shadow: var(--shadow-hover);
@@ -1021,10 +1075,12 @@ body > hr + p {
   font-weight: 700;
   color: #fff;
   margin: 0;
+  transition: var(--transition);
 }
 .card-body {
   padding: 24px;
   background-color: var(--bg-card);
+  transition: var(--transition);
 }
 .card-body p {
   color: var(--text-muted);
@@ -1039,6 +1095,7 @@ body > hr + p {
   padding: 7px 0;
   border-bottom: 1px solid var(--border-col);
   color: var(--text-main);
+  transition: var(--transition);
   display: flex;
   align-items: center;
   gap: 8px;
@@ -1059,6 +1116,7 @@ body > hr + p {
   color: var(--color-primary);
   margin-bottom: 8px;
   letter-spacing: -0.02em;
+  transition: var(--transition);
 }
 .popular-badge {
   display: inline-block;
@@ -1069,6 +1127,7 @@ body > hr + p {
   padding: 4px 13px;
   border-radius: var(--radius-xl);
   margin-top: 6px;
+  transition: var(--transition);
   letter-spacing: 0.05em;
   box-shadow: 0 3px 12px rgba(37, 99, 235, 0.4);
 }
@@ -1080,6 +1139,7 @@ body > hr + p {
   color: var(--text-main);
   box-shadow: none;
   border-radius: var(--radius-md);
+  transition: var(--transition);
 }
 .accordion-button:not(.collapsed) {
   color: var(--color-primary);
@@ -1105,6 +1165,7 @@ body > hr + p {
   border-radius: var(--radius-lg);
   padding: 28px;
   height: 100%;
+  transition: var(--transition);
 }
 .value-card:hover {
   box-shadow: var(--shadow-hover);
@@ -1123,6 +1184,7 @@ body > hr + p {
   font-size: 1.4rem;
   color: var(--color-primary);
   margin-bottom: 16px;
+  transition: var(--transition);
 }
 .value-card:hover .value-icon {
   background: rgba(37, 99, 235, 0.18);
@@ -1132,11 +1194,13 @@ body > hr + p {
   font-weight: 700;
   margin-bottom: 8px;
   color: var(--text-main);
+  transition: var(--transition);
 }
 .value-desc {
   color: var(--text-muted);
   font-size: 0.87rem;
   line-height: 1.72;
+  transition: var(--transition);
 }
 
 /* notre équipe */
@@ -1147,6 +1211,7 @@ body > hr + p {
   padding: 26px 18px;
   text-align: center;
   height: 100%;
+  transition: var(--transition);
 }
 .team-card:hover {
   box-shadow: var(--shadow-hover);
@@ -1170,11 +1235,13 @@ body > hr + p {
   font-size: 0.97rem;
   color: var(--text-main);
   margin-bottom: 4px;
+  transition: var(--transition);
 }
 .team-role {
   font-size: 0.79rem;
   color: var(--text-muted);
   margin-bottom: 14px;
+  transition: var(--transition);
 }
 .team-socials {
   display: flex;
@@ -1238,6 +1305,7 @@ body > hr + p {
   font-family: var(--font-body);
   font-size: 0.9rem;
   width: 100%;
+  transition: var(--transition);
 }
 .form-control:focus,
 .form-select:focus {
@@ -1293,6 +1361,7 @@ body > hr + p {
   font-size: 0.9rem;
   margin-bottom: 24px;
   line-height: 1.72;
+  transition: var(--transition);
 }
 .contact-info-item {
   display: flex;
@@ -1300,6 +1369,7 @@ body > hr + p {
   gap: 13px;
   padding: 15px 0;
   border-bottom: 1px solid var(--border-col);
+  transition: var(--transition);
 }
 .contact-info-item:last-child {
   border-bottom: none;
@@ -1321,11 +1391,13 @@ body > hr + p {
   font-size: 0.73rem;
   color: var(--text-muted);
   margin-bottom: 2px;
+  transition: var(--transition);
 }
 .contact-info-value {
   font-weight: 600;
   font-size: 0.88rem;
   color: var(--text-main);
+  transition: var(--transition);
 }
 
 .map-wrap {
@@ -1349,6 +1421,7 @@ body > hr + p {
   border-radius: var(--radius-lg);
   padding: 30px;
   margin-bottom: 36px;
+  transition: var(--transition);
 }
 .blog-cat {
   display: inline-flex;
@@ -1361,6 +1434,7 @@ body > hr + p {
   padding: 4px 12px;
   border-radius: var(--radius-xl);
   margin-bottom: 10px;
+  transition: var(--transition);
 }
 .blog-cat--carriere {
   background: rgba(37, 99, 235, 0.1);
@@ -1389,6 +1463,7 @@ body > hr + p {
   color: var(--text-main);
   line-height: 1.28;
   font-size: 1.1rem;
+  transition: var(--transition);
 }
 .blog-title a {
   color: inherit;
@@ -1401,6 +1476,7 @@ body > hr + p {
   font-size: 0.86rem;
   line-height: 1.72;
   margin-bottom: 14px;
+  transition: var(--transition);
 }
 .blog-meta {
   display: flex;
@@ -1458,6 +1534,7 @@ body > hr + p {
 .blog-meta-date {
   font-size: 0.72rem;
   color: var(--text-muted);
+  transition: var(--transition);
 }
 .blog-filter-bar {
   margin-bottom: 32px;
@@ -1470,6 +1547,7 @@ body > hr + p {
   height: 100%;
   display: flex;
   flex-direction: column;
+  transition: var(--transition);
 }
 .blog-card:hover {
   box-shadow: var(--shadow-hover);
@@ -1603,6 +1681,24 @@ body > hr + p {
   }
   .contact-info-sticky {
     position: static;
+  }
+
+  #services .row > .col-md-4 {
+    flex: 0 0 auto;
+    width: 50%;
+    margin-bottom: 24px;
+  }
+
+  #statistiques .row > .col-md-4 {
+    flex: 0 0 auto;
+    width: 50%;
+    margin-bottom: 24px;
+  }
+
+  .section-bg-card .row > .col-12 {
+    flex: 0 0 auto;
+    width: 50%;
+    margin-bottom: 24px;
   }
 
   footer.footer {
