@@ -51,3 +51,51 @@ if (btnRetourHaut) {
   });
 }
 window.addEventListener("scroll", gererBoutonRetourHaut);
+// commit 7
+// compteur animé au scroll
+let compteurs = document.querySelectorAll(".counter");
+let observateurCompteurs = new IntersectionObserver(
+  (elements) => {
+    elements.forEach((element) => {
+      if (element.isIntersecting) {
+        let compteur = element.target;
+        let valeurCible = parseInt(compteur.getAttribute("data-target"));
+        let valeurActuelle = 0;
+        let increment = Math.ceil(valeurCible / 200);
+        let intervalle = setInterval(function () {
+          valeurActuelle += increment;
+          if (valeurActuelle >= valeurCible) {
+            compteur.textContent = "+" + valeurCible;
+            clearInterval(intervalle);
+          } else {
+            compteur.textContent = "+" + valeurActuelle;
+          }
+        }, 10);
+        observateurCompteurs.unobserve(compteur);
+      }
+    });
+  },
+  { threshold: 0.5 },
+);
+for (let compteur of compteurs) {
+  observateurCompteurs.observe(compteur);
+}
+/* Animations fade-in-up au scroll */
+let elementsAnimer = document.querySelectorAll(".fade-in-up");
+
+let observateurFade = new IntersectionObserver(
+  (elements) => {
+    elements.forEach((element, index) => {
+      if (element.isIntersecting) {
+        let ele = element.target;
+        ele.style.transitionDelay = index * 0.07 + "s";
+        ele.classList.add("visible");
+        observateurFade.unobserve(ele);
+      }
+    });
+  },
+  { threshold: 0.15 },
+);
+for (let ele of elementsAnimer) {
+  observateurFade.observe(ele);
+}
