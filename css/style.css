@@ -1567,13 +1567,13 @@ body > hr + p {
   display: flex;
   flex-direction: column;
   background-color: var(--bg-card);
-  .page-link {
-    color: var(--color-primary);
-  }
-  .page-item.active .page-link {
-    background-color: var(--color-primary);
-    border-color: transparent;
-  }
+}
+.page-link {
+  color: var(--color-primary);
+}
+.page-item.active .page-link {
+  background-color: var(--color-primary);
+  border-color: transparent;
 }
 /* commit 5 */
 /* Mobile */
