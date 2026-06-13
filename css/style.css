@@ -120,6 +120,7 @@ hr {
 /* Navbar */
 .navbar {
   background: rgba(10, 15, 30, 0.92);
+  /* flouter l'arrière-plan */
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
   border-bottom: 1px solid rgba(37, 99, 235, 0.18);
@@ -128,7 +129,7 @@ hr {
   top: 0;
   z-index: 1000;
 }
-
+/* effet shrink */
 .navbar.scrolled {
   padding: 8px 0;
   box-shadow: 0 4px 32px rgba(37, 99, 235, 0.3);
@@ -142,7 +143,9 @@ hr {
   font-size: 1.4rem;
   letter-spacing: -0.03em;
   background: linear-gradient(90deg, #60a5fa 0%, #ffffff 100%);
+  /* le dégradé n'apparait qu'au niveau du texte */
   -webkit-background-clip: text;
+  /* rendre le texte transparents */
   -webkit-text-fill-color: transparent;
   background-clip: text;
   margin-left: 8px;
@@ -219,6 +222,7 @@ hr {
 
 /* Titres et boutons */
 h2.text-center {
+  /* texte responsive */
   font-size: clamp(1.8rem, 4vw, 2.8rem);
   font-weight: 800;
   color: var(--text-main);
@@ -418,6 +422,9 @@ body > hr + p {
   box-shadow: var(--shadow-glow);
   opacity: 0;
   transform: translateY(14px);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
   z-index: 999;
 }
 #backToTop.visible {
@@ -445,10 +452,13 @@ body > hr + p {
 #hero::before {
   content: "";
   position: absolute;
+  /* raccourci pour top, right, bottom, left */
   inset: 0;
+  /* image de fond en grille */
   background-image:
     linear-gradient(rgba(37, 99, 235, 0.06) 1px, transparent 1px),
     linear-gradient(90deg, rgba(37, 99, 235, 0.06) 1px, transparent 1px);
+  /* taille de la grille */
   background-size: 48px 48px;
   pointer-events: none;
   transition: var(--transition);
@@ -461,6 +471,7 @@ body > hr + p {
   right: -120px;
   width: 560px;
   height: 560px;
+  /* dégradé radial lumineux */
   background: radial-gradient(
     circle,
     rgba(37, 99, 235, 0.28) 0%,
@@ -492,6 +503,7 @@ body > hr + p {
   border-radius: var(--radius-lg);
   box-shadow: 0 24px 80px rgba(37, 99, 235, 0.3);
   border: 1px solid rgba(37, 99, 235, 0.22);
+  /* animation de flottaison infinie */
   animation: heroFloat 5s ease-in-out infinite;
 }
 @keyframes heroFloat {
@@ -509,6 +521,7 @@ body > hr + p {
   background: linear-gradient(135deg, #050a14 0%, #0d1f3c 100%);
   padding: 72px 0 56px;
   position: relative;
+  /* cacher le contenu débordant */
   overflow: hidden;
 }
 .hero::before {
@@ -634,15 +647,6 @@ body > hr + p {
 #statistiques .row p:hover {
   background: rgba(37, 99, 235, 0.25);
   box-shadow: var(--shadow-glow);
-}
-
-.stat-number {
-  font-family: var(--font-display);
-  font-size: 2rem;
-  font-weight: 800;
-  color: var(--color-primary);
-  display: block;
-  margin-bottom: 4px;
 }
 
 /* Témoignages */
@@ -1113,7 +1117,7 @@ body > hr + p {
   font-family: var(--font-display);
   font-size: 2rem;
   font-weight: 800;
-  color: var(--color-primary);
+  color: var(--color-primary) !important;
   margin-bottom: 8px;
   letter-spacing: -0.02em;
   transition: var(--transition);
@@ -1287,11 +1291,14 @@ body > hr + p {
   margin-bottom: 5px;
   display: block;
 }
+/* corriger le style de remplissage auto du formulaire */
 .form-control:-webkit-autofill,
 .form-control:-webkit-autofill:hover,
 .form-control:-webkit-autofill:focus,
 .form-select:-webkit-autofill {
+  /* forcer la couleur du text */
   -webkit-text-fill-color: var(--text-main);
+  /* forcer la couleur de fond */
   -webkit-box-shadow: 0 0 0px 1000px var(--bg-input) inset;
   transition: background-color 5000s ease-in-out 0s;
 }
@@ -1632,6 +1639,10 @@ body > hr + p {
     padding: 40px 24px 32px;
     gap: 32px;
   }
+  .footer-brand {
+    max-width: 100%;
+    text-align: center;
+  }
   footer.footer > div {
     width: 100%;
     text-align: center;
@@ -1708,6 +1719,7 @@ body > hr + p {
   }
   .footer-brand {
     max-width: 100%;
+    text-align: center;
   }
   footer.footer > div {
     text-align: center;
